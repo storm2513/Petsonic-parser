@@ -17,7 +17,6 @@ puts "Подождите немного..."
 
 array = []
 page_index = 1
-puts URL + '?n=100&p=' + page_index.to_s
 doc = Nokogiri::HTML(open(URL + '?n=100&p=' + page_index.to_s))
 while true do
 	items_count = doc.xpath("//img[@itemprop='image']").size
